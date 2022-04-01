@@ -46,3 +46,14 @@ code {
 .project-image {
   width: 500px;
 }
+
+.project-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 19px 19px;
+  min-height: 0; /* NEW */
+  min-width: 0;
+  overflow: hidden;
+  margin: 15px;
+}

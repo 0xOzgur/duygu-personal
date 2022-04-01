@@ -16,9 +16,9 @@ const Projects = () => {
             fuga dolore.
           </p>
         </div>
-        <div className=" ">
+        <div className="project-items">
           {projects.map((project) => (
-            <div key={project.id}>
+            <div key={project.id} className="">
               <a
                 href={project.link}
 
