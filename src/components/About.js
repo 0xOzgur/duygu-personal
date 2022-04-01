@@ -19,7 +19,7 @@ const About = () => {
           <Link to="/projects">See my previous work.</Link>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img className="object-cover object-center rounded" src={require("./duygu-find.jpg")} alt="duygu" style={{width:'50%', height:'50%', }}/>
+          <img className="object-cover object-center rounded" src={require("../images/duygu-find.jpg")} alt="duygu" style={{width:'50%', height:'50%', }}/>
         </div>
       </div>
     </div>
