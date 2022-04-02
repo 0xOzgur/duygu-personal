@@ -25,27 +25,30 @@ const Contact = () => {
   };
 
   return (
-    <div className='form-container'>
-      <form ref={form} onSubmit={sendEmail}>
-
-        <div className='info-container'>
+    <div className='container'>
+      <h1 className="page-title">
+        Contact me!
+      </h1>
+      <form ref={form} onSubmit={sendEmail} className='row'>
+        <div className='column'>
           <label>Full name</label>
           <input className='form-item' type='text' name='fullname' required/>
-           <label>Phone</label>
+          <br/>
+          <label>Phone</label>
           <input className='form-item' type='text' name='phone' required/>
-           <label>Email</label>
+          <br/>
+          <label>Email</label>
           <input className='form-item' type='text' name='email' required/>
         </div>
 
-        <div className='msg-container'>
+        <div className='column'>
           <label>Your message</label>
-          <textarea className='form-item' type='text' name='message' required/>
+          <textarea type='text' name='message' rows="5" required/>
+          <br/>
           <button type='submit' value='Send'>Send</button>
+          <div className='sent-confirm'>{result ? <Result/> : null}</div>
         </div>
-
-        <div className='sent-confirm'>{result ? <Result/> : null}</div>
       </form>
-
     </div>
   )
 }
