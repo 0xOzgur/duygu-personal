@@ -43,17 +43,25 @@ code {
   text-decoration: none;
 }
 
-.project-image {
-  width: 500px;
+.project-items {
+  margin: 25px 25px;
+  padding: 35px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 8px;
 }
 
-.project-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 19px 19px;
-  min-height: 0; /* NEW */
-  min-width: 0;
-  overflow: hidden;
-  margin: 15px;
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-image {
+  width: 550px;
+  height: 350px;
+  /* object-fit: cover; */
+  background-size: cover;
+  border-radius: 5px;
 }

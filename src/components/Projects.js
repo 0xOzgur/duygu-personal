@@ -16,26 +16,26 @@ const Projects = () => {
             fuga dolore.
           </p>
         </div>
-        <div className="project-items">
+        <div className="project-container">
           {projects.map((project) => (
-            <div key={project.id} className="">
-              <a
-                href={project.link}
+            <div key={project.id} className="project-items">
+              <div className=''>
+                <a
+                  href={project.link}
 
-                className="project-title">
-                  <h1 className="">
-                    {project.title}
-                  </h1>
-              </a>
+                  className="project-title">
+                    <h1 className="">
+                      {project.title}
+                    </h1>
+                </a>
+              </div>
               <div className="">
                 <img
                   alt="gallery"
                   className="project-image"
                   src={project.image}
                   />
-                <div className="">
                   <p className="">{project.description}</p>
-                </div>
               </div>
             </div>
           ))}
