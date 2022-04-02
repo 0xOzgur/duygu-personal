@@ -4,16 +4,14 @@ import projects from '../projects.js'
 const Projects = () => {
   return (
     <div>
-      <section id="projects" className="">
-      <div className="">
+      <section id="projects" className="page-container">
         <div className="flex flex-col w-full mb-20">
-          <h1 className="">
-            Apps I've Built
+          <h1 className="page-title">
+            My apps and my contributions
           </h1>
-          <p className="">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
+          <p className="page-detail">
+            During the bootcamp, we have completed two projects in a team. Our frist project was an Air-Bnb clone which is X-Space and the final project, called Smart BOP, was a solotion to bop documentations.
+            Following the bootcamp, I went on my studies about JavaScript and React. I tried a few projects with the help of tutorials, etc. I am still going on with my React App building journey! Thanks for visiting!
           </p>
         </div>
         <div className="project-container">
@@ -35,12 +33,11 @@ const Projects = () => {
                   className="project-image"
                   src={project.image}
                   />
-                  <p className="">{project.description}</p>
+                  <p className="project-detail">{project.description}</p>
               </div>
             </div>
           ))}
         </div>
-      </div>
     </section>
     </div>
   )
