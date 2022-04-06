@@ -29,6 +29,14 @@ const projects = [
     image: asianKitchen,
     link: "https://dcavusoglu.github.io/asiankitchen/",
   },
+  {
+    id: 5,
+    title: "Smart-Bop",
+    description:
+      "My teams' final project at the bootcamp.",
+    image: smartBop,
+    link: "https://www.smart-bop.com/",
+  },
   // {
   //   id: 4,
   //   title: "Ruby on Rails To-Do App",
@@ -38,19 +46,12 @@ const projects = [
   //   link: "https://pythonbootcamp.com",
   // },
   {
+    id: 4,
     title: "X-Space",
     description:
-      "This is our Air BnB cloning project at the bootcamp.",
+      "This is our Air-BnB cloning project at the bootcamp.",
     image: xSpace,
     link: "https://x-space-696.herokuapp.com",
-  },
-  {
-    id: 5,
-    title: "Smart-Bop",
-    description:
-      "A solution for BOPs. My teams' final project at the bootbcamp.",
-    image: smartBop,
-    link: "https://www.smart-bop.com/",
   },
 ];
 

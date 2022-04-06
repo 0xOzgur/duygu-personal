@@ -1,0 +1,35 @@
+.company-logo {
+  max-width: 9vh;
+  width: 100%;
+  margin: 5px 30px;
+}
+
+.navbar-container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  align-content: stretch;
+  margin: 0 30px;
+}
+
+.nb-item {
+  list-style: none;
+  margin-left: 12px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

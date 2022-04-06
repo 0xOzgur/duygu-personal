@@ -1,0 +1,68 @@
+.about-wrapper {
+
+}
+
+.about-box {
+  display: flex;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px; */
+ justify-content: center;
+ flex:1;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about-detail {
+  text-align: justify;
+  font-size: 1.3rem;
+  margin: 1.5rem;
+}
+
+
+
+.avatar {
+  padding: 0;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+.avatar-img {
+  border-radius: 10%;
+  width: 100%;
+  max-width: 500px;
+
+}
+
+.img-link-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.link-item {
+display: flex;
+flex-direction: row;
+align-self: center;
+margin: 8px auto 10px auto;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: black;
+  font-family: "Signika Negative",
+    sans-serif;
+  margin: 18px;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+  rgba(17, 17, 26, 0.1) 0px 16px 56px,
+  rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  border-radius: 5px;
+}
+.link-item a:hover {
+  background: #94d2bd ;
+  color: #005f73;
+}

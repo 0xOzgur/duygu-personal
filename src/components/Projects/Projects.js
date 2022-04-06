@@ -1,11 +1,12 @@
 import React from 'react'
-import projects from '../projects.js'
+import projects from '../../../src/projects'
+import './projects.css'
 
 const Projects = () => {
   return (
     <div>
       <section id="projects" className="page-container">
-        <div className="flex flex-col w-full mb-20">
+        <div className="flex">
           <h1 className="page-title">
             My apps and my contributions
           </h1>
@@ -27,13 +28,15 @@ const Projects = () => {
                     </h1>
                 </a>
               </div>
-              <div className="">
-                <img
-                  alt="gallery"
-                  className="project-image"
-                  src={project.image}
-                  />
-                  <p className="project-detail">{project.description}</p>
+              <div>
+                <div className="image-container">
+                  <img
+                    alt="gallery"
+                    className="project-image"
+                    src={project.image}
+                    />
+                </div>
+                <p className="project-detail">{project.description}</p>
               </div>
             </div>
           ))}

@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: "Signika Negative",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.company-logo {
+  max-width: 9vh;
+  width: 100%;
+  margin: 5px 30px;
+}
+
+.navbar-container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  align-content: stretch;
+  margin: 0 30px;
+}
+
+.nb-item {
+  list-style: none;
+  margin-left: 12px;
+  font-size: 1.5rem;
+}
+
+/* project page  */
+
+.project-items {
+  margin: 25px 25px;
+  padding: 35px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 8px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-image {
+  width: 550px;
+  height: 350px;
+  /* object-fit: cover; */
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.project-title,
+.page-title,
+.nb-item a {
+  font-family: "Signika Negative", sans-serif;
+  color: black;
+  /* color: azure; */
+  text-decoration: none;
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-detail {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1.5rem;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #13678a;
+  display: flex;
+  justify-content: center;
+}
+
+.page-detail {
+  font-size: 1.5rem;
+  color: #012030;
+  /* color: azure; */
+  margin: 30px;
+  text-align: justify;
+}
+
+.page-container {
+  margin: 40px 20px;
+}
+
+
+/* about and contact styling */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 40px 120px;
+  width: 60%;
+
+}
+
+/* Contact page styling */
+label {
+  display: flex;
+  margin: 5px 10px;
+}
+
+button,
+textarea,
+input {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+
+button {
+  padding: 3px 8px;
+  background-color: #b0bad3;
+  color: #fff;
+  margin: 10px 0 0 10px;
+}
+
+textarea {
+  background-color: #b0bad3;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 8px;
+  margin: 10px 0 0 10px;
+  width: 450px;
+}
+
+.form-item {
+  border-radius: 10px;
+  background-color: #b0bad3;
+  padding: 7px 10px;
+  margin: 10px;
+}
+
+.columnA {
+  flex: 70%;
+  padding: 0 2px 0 15px;
+}
+
+.contact-a {
+  flex: 30%;
+  padding: 0;
+}
+
+.contact-b {
+  flex: 70%;
+  padding: 0;
+}
+
+.columnB {
+  flex: 30%;
+  padding: 0 15px 0 2px;
+}
+
+.about-detail {
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+.avatar {
+  border-radius: 10%;
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+}
+
+.link-item {
+  margin-top: 10px;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: black;
+  font-family: "Signika Negative",
+    sans-serif;
+}
