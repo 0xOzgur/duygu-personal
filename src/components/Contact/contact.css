@@ -4,12 +4,21 @@
 }
 
 .contact-box {
+  color: #2F4858;
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
 
+.contact-title {
+  color: #2F4858;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 label {
+  font-weight: bold;
+  font-size: 1.2rem;
   display: flex;
   margin: 5px 10px;
 }
@@ -17,14 +26,14 @@ label {
 button,
 textarea,
 input {
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
     rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    rgba(0, 0, 0, 0.09) 0px 32px 16px; */
   border: none;
   border-radius: 4px;
 }
@@ -32,13 +41,17 @@ input {
 
 button {
   padding: 3px 8px;
-  background-color: #b0bad3;
+  background-color: #03A688;
   color: #fff;
   margin: 10px 0 0 10px;
 }
 
+button:hover {
+  background: #04D98B;
+}
+
 textarea {
-  background-color: #b0bad3;
+  border: 2px solid #008037;
   color: #fff;
   letter-spacing: 1px;
   padding: 8px;
@@ -48,7 +61,7 @@ textarea {
 
 .form-item {
   border-radius: 10px;
-  background-color: #b0bad3;
+  border: 2px solid #ffd871;
   padding: 7px 10px;
   margin: 10px;
 }

@@ -1,8 +1,12 @@
+.page-container {
+  margin-top: 3rem;
+}
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .project-items {
@@ -12,10 +16,11 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 8px;
-  flex-basis: 551px;
+  flex-basis: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
 }
 
 .image-container {
@@ -33,36 +38,37 @@
 }
 
 .project-title,
-.page-title,
-.nb-item a {
+.page-title
+  {
   font-family: "Signika Negative", sans-serif;
-  color: black;
   /* color: azure; */
   text-decoration: none;
 }
 
 .project-title {
   font-size: 1.5rem;
+  color: #2F4858;
 }
 
 .project-detail {
   font-family: "Signika Negative", sans-serif;
   font-size: 1.5rem;
   white-space: initial;
+  color: #2F4858;
 }
 
 .page-title {
   font-weight: bold;
   font-size: 2rem;
   color: #13678a;
+  /* color: #fafafa; */
   text-align: center;
 }
 
 .page-detail {
   font-size: 1.5rem;
-  color: #012030;
-  /* color: azure; */
-  margin: 30px;
+  color: #2F4858;
+  margin: 2rem 4rem;
   text-align: justify;
 }
 
@@ -71,5 +77,13 @@
 }
 
 @media screen and (max-width: 650px) {
-
+ .page-title {
+    font-size: 1.5rem;
+ }
+ .page-detail {
+    font-size: 1.2rem;
+ }
+ .project-items {
+    flex-basis: 400px;
+ }
 }

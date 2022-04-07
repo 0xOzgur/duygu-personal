@@ -1,14 +1,30 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css'
+import validator from 'validator'
+
+
 
 const Result = () => {
   return (
     <span>Your message has successfully been sent.</span>
-  )
-}
+    )
+  }
 
-const Contact = () => {
+
+
+  const Contact = () => {
+    const [emailError, setEmailError] = useState('')
+    const validateEmail = (e) => {
+      var email = e.target.value
+
+      if (validator.isEmail(email)) {
+        setEmailError('Valid Email :)')
+      } else {
+        setEmailError('Enter valid Email!')
+      }
+    }
+
   const form = useRef();
   const [result, setResult] = useState()
 
@@ -24,6 +40,7 @@ const Contact = () => {
       form.current.reset();
       setResult(true);
   };
+
 
   return (
     <div className='contact-wrapper'>
@@ -41,7 +58,8 @@ const Contact = () => {
             <input className='form-item' type='text' name='phone' required/>
             <br/>
             <label>Email</label>
-            <input className='form-item' type='text' name='email' required/>
+            <input className='form-item' type='text' name='email' onChange={(e) => validateEmail(e)} required/>
+            <div className='email-error'>{emailError}</div>
           </div>
 
           <div className='message-container'>

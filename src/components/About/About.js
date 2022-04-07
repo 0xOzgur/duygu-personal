@@ -9,7 +9,7 @@ const About = () => {
     <div className='about-wrapper'>
       <div className='about-box'>
         <div className='detail-container'>
-          <img src={duygu} className='about-detail'/>
+          <img src={duygu} className='about-detail about-detail-img' alt='Hi I am Duygu!'/>
           <br/>
           <p className='about-detail'>I just found my passion in coding!</p>
           <br/>
