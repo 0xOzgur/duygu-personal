@@ -64,7 +64,9 @@ const Result = () => {
 
           <div className='message-container'>
             <label>Your message</label>
-            <textarea type='text' name='message' rows="5" required/>
+            <div className='textarea-container'>
+              <textarea type='text' name='message' rows="5" required/>
+            </div>
             <br/>
             <button type='submit' value='Send'>Send</button>
             <div className='sent-confirm'>{result ? <Result/> : null}</div>
