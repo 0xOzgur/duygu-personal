@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './about.css'
-import avatar from '../../images/duygu-find.jpg'
+import avatar from '../../images/duygu-find.jpg';
+import duygu from '../../images/duygu-intro.png';
 
 const About = () => {
   return (
     <div className='about-wrapper'>
       <div className='about-box'>
         <div className='detail-container'>
-          <p className='about-detail'>Hi, I am Duygu!</p>
+          <img src={duygu} className='about-detail'/>
           <br/>
           <p className='about-detail'>I just found my passion in coding!</p>
           <br/>

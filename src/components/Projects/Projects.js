@@ -18,6 +18,13 @@ const Projects = () => {
         <div className="project-container">
           {projects.map((project) => (
             <div key={project.id} className="project-items">
+              <div className="image-container">
+                <img
+                  alt="gallery"
+                  className="project-image"
+                  src={project.image}
+                  />
+              </div>
               <div className=''>
                 <a
                   href={project.link}
@@ -29,13 +36,6 @@ const Projects = () => {
                 </a>
               </div>
               <div>
-                <div className="image-container">
-                  <img
-                    alt="gallery"
-                    className="project-image"
-                    src={project.image}
-                    />
-                </div>
                 <p className="project-detail">{project.description}</p>
               </div>
             </div>

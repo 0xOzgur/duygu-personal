@@ -1,3 +1,14 @@
+
+.contact-wrapper {
+  text-align: center;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 label {
   display: flex;
   margin: 5px 10px;
@@ -40,4 +51,10 @@ textarea {
   background-color: #b0bad3;
   padding: 7px 10px;
   margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-box {
+    flex-direction: column;
+  }
 }

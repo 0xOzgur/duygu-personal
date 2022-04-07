@@ -1,61 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: "Signika Negative",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-
-/* project page  */
-
-
-.page-title {
-  font-weight: bold;
-  font-size: 2rem;
-  color: #13678a;
-  display: flex;
-  justify-content: center;
-}
-
-.page-detail {
-  font-size: 1.5rem;
-  color: #012030;
-  /* color: azure; */
-  margin: 30px;
-  text-align: justify;
-}
-
-.page-container {
-  margin: 40px 20px;
-}
-
-
-
-
-
-
-/* Contact page styling */
-
-
-.columnA {
-  flex: 70%;
-  padding: 0 2px 0 15px;
-}
-
-.contact-a {
-  flex: 30%;
-  padding: 0;
-}
-
-.contact-b {
-  flex: 70%;
-  padding: 0;
-}
-
-.columnB {
-  flex: 30%;
-  padding: 0 15px 0 2px;
+  background: #fff;
 }

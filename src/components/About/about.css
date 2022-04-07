@@ -66,3 +66,6 @@ margin: 8px auto 10px auto;
   background: #94d2bd ;
   color: #005f73;
 }
+
+@media screen and (max-width: 580px) {
+}

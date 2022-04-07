@@ -26,14 +26,14 @@ const Contact = () => {
   };
 
   return (
-    <div className='page-wrapper'>
+    <div className='contact-wrapper'>
       <div>
         <span className="contact-title">
           Contact me!
         </span>
       </div>
-        <form ref={form} onSubmit={sendEmail} className='row'>
-          <div className='contact-a'>
+        <form ref={form} onSubmit={sendEmail} className='contact-box'>
+          <div className='info-container'>
             <label>Full name</label>
             <input className='form-item' type='text' name='fullname' required/>
             <br/>
@@ -44,7 +44,7 @@ const Contact = () => {
             <input className='form-item' type='text' name='email' required/>
           </div>
 
-          <div className='contact-b'>
+          <div className='message-container'>
             <label>Your message</label>
             <textarea type='text' name='message' rows="5" required/>
             <br/>
