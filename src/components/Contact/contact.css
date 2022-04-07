@@ -11,6 +11,14 @@
   margin-top: 3rem;
 }
 
+.info-container {
+  margin-right: 2rem;
+}
+
+.message-container {
+  margin-left: 2rem;
+}
+
 .contact-title {
   color: #2F4858;
   font-size: 1.4rem;
@@ -21,23 +29,19 @@ label {
   font-weight: bold;
   font-size: 1.2rem;
   display: flex;
+  margin-top: 8px;
 }
 
 button,
 textarea,
 input {
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border: none;
   border-radius: 4px;
 }
 
+/* input {
+  height: 35px;
+} */
 
 button {
   padding: 3px 8px;
@@ -57,19 +61,30 @@ button:hover {
 
 textarea {
   border: 2px solid #008037;
-  color: #fff;
+  font-family: 'Courgette',
+  cursive;
+  color: #2F4858;
+  font-weight: bold;
+  font-size: 18px;
   letter-spacing: 1px;
   padding: 8px;
-  margin: 10px 0 0 10px;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .form-item {
+  font-family: 'Courgette',
+  cursive;
+  font-weight: 600;
   border-radius: 10px;
   border: 2px solid #ffd871;
+  color: #2F4858;
   padding: 7px 10px;
   margin-bottom: 8px;
+  height: 38px;
+  width: 222px;
+  margin:0;
 }
 
 @media screen and (max-width: 600px) {
@@ -81,5 +96,9 @@ textarea {
   .textarea-container {
     width: 300px;
     height: 120px;
+  }
+
+  .textarea {
+    font-size: 14px;
   }
 }

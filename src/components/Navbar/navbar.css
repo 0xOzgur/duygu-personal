@@ -29,9 +29,9 @@
 
 .nb-item a {
   font-family: "Signika Negative", sans-serif;
-  background: linear-gradient(to right, #008037 0%, #ffd871 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+background: linear-gradient(to right, #008037 0%, #ffd871 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   /* color: azure; */
   text-decoration: none;
 }
@@ -40,5 +40,12 @@
   .navbar-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
