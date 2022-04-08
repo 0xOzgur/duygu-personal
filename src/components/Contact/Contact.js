@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css'
 import validator from 'validator'
-import Input, {isPossiblePhoneNumber}  from 'react-phone-number-input/input'
 
 
 
@@ -22,28 +21,26 @@ const Result = () => {
       if (validator.isEmail(email)) {
         setEmailError('Valid Email :)')
       } else {
-        setEmailError('Enter a valid Email!')
+        setEmailError('Enter valid Email!')
       }
     }
 
+  const form = useRef();
+  const [result, setResult] = useState()
 
-    const form = useRef();
-    const [result, setResult] = useState()
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-
-      emailjs.sendForm('service_dxt5fs8', 'template_cxuvrwn', form.current, '97MUu26IOh-3kcLvZ')
+    emailjs.sendForm('service_dxt5fs8', 'template_cxuvrwn', form.current, '97MUu26IOh-3kcLvZ')
       .then((result) => {
-        console.log(result.text);
+          console.log(result.text);
       }, (error) => {
-        console.log(error.text);
+          console.log(error.text);
       });
       form.current.reset();
       setResult(true);
-    };
+  };
 
-    const [value, setValue] = useState()
 
   return (
     <div className='contact-wrapper'>
@@ -58,14 +55,7 @@ const Result = () => {
             <input className='form-item' type='text' name='fullname' required/>
             <br/>
             <label>Phone</label>
-              <Input className='form-item'
-              country='TR'
-              international
-              withCountryCallingCode
-              value={value}
-              onChange={setValue}
-              error={value ? (isPossiblePhoneNumber(value) ? undefined : 'Invalid phone number') : 'Phone number required'}
-              required/>
+            <input className='form-item' type='tel' name='phone' pattern="[0-9]{4}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder='05123456789' required/>
             <br/>
             <label>Email</label>
             <input className='form-item' type='text' name='email' onChange={(e) => validateEmail(e)} required/>
