@@ -1,5 +1,5 @@
 .company-logo {
-  max-width: 9vh;
+  max-width: 10vh;
   width: 100%;
   margin: 5px 30px;
 }
@@ -29,9 +29,9 @@
 
 .nb-item a {
   font-family: "Signika Negative", sans-serif;
-background: linear-gradient(to right, #008037 0%, #ffd871 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #008037 0%, #ffd871 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   /* color: azure; */
   text-decoration: none;
 }
@@ -61,26 +61,32 @@ background: linear-gradient(to right, #008037 0%, #ffd871 100%);
     .navbar-items-mobile {
       position: absolute;
       display: block;
+      background: white;
       list-style: none;
-      left: 0;
-      top: 60px;
+      left: -20px;
+      top: 0;
       transition: all 0.5s ease-out;
       width: 100%;
     }
 
     .nb-item {
+      color: black;
       text-align: center;
       width: 100%;
-      padding: 32px;
-      background: black;
+      padding: 9px;
+      margin: 20px;
       transition: all 0.5s ease;
     }
 
+    .nb-item a {
+        background: linear-gradient(to right, black 0%, black 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     .mobile-menu {
       display: block;
       position: absolute;
-      font-size: 32px;
-      color: white;
+      font-size: 28px;
       top:10px;
       right: 25px;
       border: none;
