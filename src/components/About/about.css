@@ -1,5 +1,6 @@
 .about-wrapper {
-
+display: flex;
+justify-content: center;
 }
 
 .about-box {
@@ -19,7 +20,7 @@
 .about-detail {
   text-align: justify;
   font-size: 1.3rem;
-  margin: 1.5rem;
+  margin: 0.5rem;
   color: #246975;
 }
 
@@ -39,7 +40,7 @@
 .about-detail-img {
   width: 100%;
   max-width: 350px;
-  margin: 2rem;
+  margin: 1rem 2rem 0 2rem;
 }
 
 .img-link-container {
@@ -78,7 +79,11 @@ margin: 8px auto 10px auto;
   .about-box, .link-item {
     flex-direction: column;
   }
+
+  .about-box {
+    margin: 7rem 2rem 3rem 2rem;
+  }
   .about-detail-img {
-    width: 100%;
+    width: 80%;
   }
   }

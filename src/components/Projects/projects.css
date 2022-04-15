@@ -54,7 +54,7 @@
   font-family: "Signika Negative", sans-serif;
   font-size: 1.5rem;
   white-space: initial;
-  color: #2F4858;
+  color: #246975;
 }
 
 .page-title {
@@ -63,6 +63,10 @@
   color: #13678a;
   /* color: #fafafa; */
   text-align: center;
+}
+
+.project-title:hover {
+  color: #f5773c;
 }
 
 .page-detail {
@@ -77,13 +81,19 @@
 }
 
 @media screen and (max-width: 650px) {
- .page-title {
-    font-size: 1.5rem;
- }
- .page-detail {
-    font-size: 1.2rem;
- }
- .project-items {
-    flex-basis: 400px;
- }
+  .page-container {
+    margin: 7rem auto 3rem auto;
+  }
+
+  .image-container {
+    width: 300px;
+    height: 180px;
+    box-shadow: rgb(44, 62, 80) -15px 0px 15px -15px,
+      rgb(44, 62, 80) 15px 0px 15px -15px inset;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
 }

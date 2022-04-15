@@ -88,9 +88,16 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
+
+  .contact-wrapper {
+    margin: 7rem auto 3rem auto;
+  }
+
   .contact-box {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .textarea-container {
