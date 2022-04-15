@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './about.css'
-import avatar from '../../images/duygu-find.jpg';
+import avatar from '../../images/duygucavusoglu.png';
 import duygu from '../../images/duygu-intro.png';
 
 const About = () => {
