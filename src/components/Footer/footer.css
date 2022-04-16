@@ -1,0 +1,17 @@
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #008037 0%, #ffd871 100%);
+  width: 100%;
+  height: 10%;
+}

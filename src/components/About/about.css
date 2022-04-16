@@ -66,8 +66,8 @@ margin: 8px auto 10px auto;
     sans-serif;
   margin: 18px;
   padding: 0.5rem 1rem;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 .link-item a:hover {
   background: linear-gradient(to left, #008037 0%, #ffd871 100%);
@@ -86,4 +86,8 @@ margin: 8px auto 10px auto;
   .about-detail-img {
     width: 80%;
   }
+
+.link-item {
+  font-size: 1rem;
+}
   }

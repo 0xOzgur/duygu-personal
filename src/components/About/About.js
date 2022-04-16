@@ -4,6 +4,7 @@ import './about.css'
 import avatar from '../../images/duygucavusoglu.png';
 import duygu from '../../images/duygu-intro.png';
 
+
 const About = () => {
   return (
     <div className='about-wrapper'>

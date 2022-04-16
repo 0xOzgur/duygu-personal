@@ -6,7 +6,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Navbar, Contact, Projects, About } from './components';
+import { Navbar, Contact, Projects, About, Footer } from './components';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
