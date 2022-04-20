@@ -22,21 +22,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:cover;
+  /* height:cover; */
   width:100%;
   margin-bottom: 0px;
   /* background: linear-gradient(to right,
   #008037 0%,
   #ffd871 100%); */
   background: linear-gradient( to bottom, #ffd871 10%, #008037 90%);
+  position:fixed;
+  left:0px;
+  bottom:0px;
 
 }
 
 
 @media screen and (max-width: 650px)  {
   .footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
   }
 }

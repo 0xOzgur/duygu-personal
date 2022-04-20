@@ -1,7 +1,7 @@
 .company-logo {
   max-width: 10vh;
   width: 100%;
-  margin: auto 12px;
+  margin: 8px 12px;
 }
 
 .navbar-container {
@@ -35,6 +35,13 @@
   -webkit-text-fill-color: transparent;
   /* color: azure; */
   text-decoration: none;
+  margin-left: 1rem;
+}
+
+.nb-item a:hover {
+  background: linear-gradient(to left, #008037 0%, #ffd871 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .mobile-menu {
@@ -94,7 +101,7 @@
       display: block;
       position: absolute;
       font-size: 28px;
-      top:10px;
+      top:19px;
       right: 25px;
       border: none;
       outline: none;

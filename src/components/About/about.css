@@ -1,6 +1,5 @@
 .about-wrapper {
-display: flex;
-justify-content: center;
+margin: 3rem;
 }
 
 .about-box {
@@ -15,6 +14,7 @@ justify-content: center;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  margin: 10px;
 }
 
 .about-detail {
@@ -51,10 +51,11 @@ justify-content: center;
 }
 
 .link-item {
-display: flex;
-flex-direction: row;
-align-self: center;
-margin: 8px auto 10px auto;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  margin: 18px auto 10px auto;
 }
 
 .link-item a {
@@ -64,10 +65,9 @@ margin: 8px auto 10px auto;
   -webkit-text-fill-color: transparent;
   font-family: "Signika Negative",
     sans-serif;
-  margin: 18px;
-  padding: 0.5rem 1rem;
   font-weight: bolder;
   font-size: 1.5rem;
+  padding: 1.5rem;
 }
 .link-item a:hover {
   background: linear-gradient(to left, #008037 0%, #ffd871 100%);
@@ -99,9 +99,21 @@ margin: 8px auto 10px auto;
   .link-item a {
     font-size: 1.1rem;
     margin: 0px;
+    padding: 0.4rem;
   }
 
   .link-item {
-    margin: 1.5rem auto 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto 6rem auto;
+  }
+
+  .about-box {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-wrapper {
+    margin: 1.2rem;
   }
 }

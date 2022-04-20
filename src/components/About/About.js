@@ -10,7 +10,9 @@ import { faBriefcase, faEye } from '@fortawesome/free-solid-svg-icons';
 const About = () => {
   return (
     <div className='about-wrapper'>
+
       <div className='about-box'>
+
         <div className='detail-container'>
           <img src={duygu} className='about-detail about-detail-img' alt='Hi I am Duygu!'/>
           <br/>
@@ -19,7 +21,7 @@ const About = () => {
           <p className='about-detail'>.. a former teacher, so ... I have got a sharp career change and dove into coding!
             I love the power of creating things.
             <br/>
-            A life long learner and having a strong challenger on the earth.
+            A life long learner and a strong challenger on the earth.
             <br/>
             Let's see what I can offer you with your projects!
           </p>
@@ -29,13 +31,14 @@ const About = () => {
           <div className="avatar">
             <img className='avatar-img'  src={avatar} alt="duygu"/>
           </div>
-          <div className='link-item'>
-            <Link to="/contact" ><FontAwesomeIcon icon={faBriefcase} className="link-icon"/> Let's work together!</Link>
-            <Link to="/projects" ><FontAwesomeIcon icon={faEye} className="link-icon"/> See my previous work.</Link>
-          </div>
         </div>
+
       </div>
 
+      <div className='link-item'>
+        <Link to="/contact" ><FontAwesomeIcon icon={faBriefcase} className="link-icon"/> Let's work together!</Link>
+        <Link to="/projects" ><FontAwesomeIcon icon={faEye} className="link-icon"/> See my previous work.</Link>
+      </div>
     </div>
   )
 }

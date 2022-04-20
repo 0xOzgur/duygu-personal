@@ -30,9 +30,9 @@ const Projects = () => {
                   href={project.link}
 
                   className="project-title">
-                    <h1 className="">
+                    <span className="">
                       {project.title}
-                    </h1>
+                    </span>
                 </a>
               </div>
               <div>
