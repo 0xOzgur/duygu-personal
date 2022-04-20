@@ -20,8 +20,8 @@
 }
 
 .contact-title {
-  color: #2F4858;
-  font-size: 1.4rem;
+  color: #13678a;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -44,10 +44,10 @@ input {
 } */
 
 button {
-  padding: 3px 8px;
+  padding: 8px 15px;
   background-color: #03A688;
   color: #fff;
-  margin: 10px 0 0 10px;
+
 }
 
 button:hover {
@@ -87,7 +87,7 @@ textarea {
   margin:0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
   .contact-wrapper {
     margin: 7rem auto 3rem auto;
@@ -107,5 +107,9 @@ textarea {
 
   .textarea {
     font-size: 14px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
   }
 }

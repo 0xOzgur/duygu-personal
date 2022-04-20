@@ -10,7 +10,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   return (
-    <div className='navbar-container '>
+    <div className='navbar-container'>
       <div className='logo-cont'>
         <Link to='/'><img src={logo} className='company-logo' alt=''/></Link>
       </div>

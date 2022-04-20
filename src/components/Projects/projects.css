@@ -96,4 +96,18 @@
     width: 100%;
   }
 
+  .project-detail {
+    font-size: 1rem;
+    margin: 8px 15px;
+    text-align: start;
+    color: #246975;
+  }
+
+  .page-detail {
+    font-size: 1.2rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
 }
