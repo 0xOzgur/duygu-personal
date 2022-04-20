@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import './about.css'
 import avatar from '../../images/duygucavusoglu.png';
 import duygu from '../../images/duygu-intro.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase, faEye } from '@fortawesome/free-solid-svg-icons';
 
 
 const About = () => {
@@ -28,8 +30,8 @@ const About = () => {
             <img className='avatar-img'  src={avatar} alt="duygu"/>
           </div>
           <div className='link-item'>
-            <Link to="/contact" >Let's work together!</Link>
-            <Link to="/projects" >See my previous work.</Link>
+            <Link to="/contact" ><FontAwesomeIcon icon={faBriefcase} className="link-icon"/> Let's work together!</Link>
+            <Link to="/projects" ><FontAwesomeIcon icon={faEye} className="link-icon"/> See my previous work.</Link>
           </div>
         </div>
       </div>

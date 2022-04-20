@@ -75,6 +75,10 @@ margin: 8px auto 10px auto;
   -webkit-text-fill-color: transparent;
 }
 
+.link-icon {
+  color: #008037;
+}
+
 @media screen and (max-width: 600px) {
   .about-box, .link-item {
     flex-direction: column;
