@@ -1,115 +1,260 @@
+/* contact.css */
+.contact-section {
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--background-light) 0%, var(--background-white) 100%);
+}
 
-.contact-wrapper {
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-header {
   text-align: center;
-}
-
-.contact-box {
-  color: #2F4858;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  margin-top: 3rem;
-}
-
-.info-container {
-  margin-right: 2rem;
-}
-
-.message-container {
-  margin-left: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contact-title {
-  color: #13678a;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
 label {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
   display: flex;
-  margin-top: 8px;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-button,
-textarea,
-input {
-  border: none;
-  border-radius: 4px;
+.form-input,
+.form-textarea {
+  padding: 1rem 1.2rem;
+  border: 2px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-primary);
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* input {
-  height: 35px;
-} */
-
-button {
-  padding: 8px 15px;
-  background-color: #03A688;
-  color: #fff;
-
+/* Placeholder stilleri */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
 }
 
-button:hover {
-  background: #04D98B;
+/* Focus durumu */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  background: white;
 }
 
-.textarea-container {
-  width: 450px;
-  height: 196px;
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.6;
 }
 
-textarea {
-  border: 2px solid #008037;
-  font-family: 'Courgette',
-  cursive;
-  color: #2F4858;
-  font-weight: bold;
-  font-size: 18px;
-  letter-spacing: 1px;
-  padding: 8px;
+.email-validation {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email-validation.valid {
+  color: #059669;
+  font-weight: 500;
+}
+
+.email-validation.invalid {
+  color: #DC2626;
+  font-weight: 500;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button.primary {
+  background: var(--primary-color);
+  color: var(--background-white);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/* Hover efekti için ::before pseudo-element */
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 }
 
-.form-item {
-  font-family: 'Courgette',
-  cursive;
+.submit-button:hover::before {
+  transform: translateX(0);
+}
+
+.submit-button:hover {
+  background: var(--primary-color);
+  color: var(--background-white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.submit-button .button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.submit-button .button-icon {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.form-result {
+  font-size: 0.9rem;
+  color: #10B981;
   font-weight: 600;
-  border-radius: 10px;
-  border: 2px solid #ffd871;
-  color: #2F4858;
-  padding: 7px 10px;
-  margin-bottom: 8px;
-  height: 38px;
-  width: 222px;
-  margin:0;
 }
 
-@media screen and (max-width: 650px) {
+/* Animasyonlar */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
 
-  .contact-wrapper {
-    margin: 7rem auto 3rem auto;
-  }
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .contact-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .textarea-container {
-    width: 300px;
-    height: 120px;
-  }
-
-  .textarea {
-    font-size: 14px;
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 1rem;
   }
 
   .contact-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+
+  label {
+    font-size: 0.95rem;
   }
 }

@@ -24,37 +24,39 @@ const Navbar = () => {
 
   return (
     <div className={`navbar-container ${isScrolled ? 'scrolled' : ''}`}>
-      <div className='logo-cont'>
-        <Link to='/'>
-          <img src={logo} className='company-logo' alt='DC Logo'/>
-        </Link>
-      </div>
-      <div>
-        <ul className={isMobile ? 'navbar-items-mobile' : 'navbar-items'}
-          onClick={() => setIsMobile(false)}>
+      <div className="navbar-inner">
+        <div className='logo-cont'>
+          <Link to='/'>
+            <img src={logo} className='company-logo' alt='DC Logo'/>
+          </Link>
+        </div>
+        <div>
+          <ul className={isMobile ? 'navbar-items-mobile' : 'navbar-items'}
+            onClick={() => setIsMobile(false)}>
             <li className='nb-item'>
-            <Link to='/'>Home</Link>
-          </li>
-          <li className='nb-item'>
-            <Link to='/contact'>Contact</Link>
-          </li>
-          <li className='nb-item'>
-            <Link to='/projects'>My Projects</Link>
-          </li>
-        </ul>
-        <button 
-          className='mobile-menu'
-          onClick={() => setIsMobile(!isMobile)}
-          aria-label="Toggle menu"
-        >
-          {isMobile ? 
-            <FontAwesomeIcon icon={faXmark} /> : 
-            <FontAwesomeIcon icon={faBars} />
-          }
-        </button>
+              <Link to='/'>Home</Link>
+            </li>
+            <li className='nb-item'>
+              <Link to='/projects'>My Projects</Link>
+            </li>
+            <li className='nb-item'>
+              <Link to='/contact'>Contact</Link>
+            </li>
+          </ul>
+          <button 
+            className='mobile-menu'
+            onClick={() => setIsMobile(!isMobile)}
+            aria-label="Toggle menu"
+          >
+            {isMobile ? 
+              <FontAwesomeIcon icon={faXmark} /> : 
+              <FontAwesomeIcon icon={faBars} />
+            }
+          </button>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

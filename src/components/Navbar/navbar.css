@@ -7,12 +7,19 @@
   background: var(--background-white);
   box-shadow: var(--shadow-sm);
   z-index: 1000;
-  padding: var(--spacing-xs) var(--spacing-md);
+  height: 110px;
+  transition: all 0.3s ease;
+  /* Padding'i kaldırıyoruz çünkü iç container'a ekleyeceğiz */
+}
+
+.navbar-inner {
+  max-width: 1400px; /* Diğer sayfa içerikleriyle aynı genişlik */
+  margin: 0 auto;
+  padding: var(--spacing-xs) var(--spacing-xl); /* Yatay padding'i artırıyoruz */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 110px;
-  transition: all 0.3s ease;
+  height: 100%;
 }
 
 .navbar-container.scrolled {
@@ -47,7 +54,7 @@
 .nb-item a {
   font-family: var(--font-primary);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
   padding: var(--spacing-xs) var(--spacing-sm);

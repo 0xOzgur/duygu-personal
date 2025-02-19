@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './about.css';
 import avatar from '../../images/duygucavusoglu.png';
@@ -83,16 +83,13 @@ const TechStack = () => {
 };
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState({});
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIsVisible(prev => ({
-            ...prev,
-            [entry.target.id]: entry.isIntersecting
-          }));
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
         });
       },
       { threshold: 0.1 }
