@@ -17,13 +17,12 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
   padding: var(--spacing-xl);
 }
 
 .intro-container {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
   align-items: start;
   position: relative;
@@ -58,7 +57,6 @@
 }
 
 .intro-content {
-  margin-bottom: var(--spacing-xl);
 }
 
 .intro-description {
@@ -70,14 +68,15 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: var(--spacing-xl) 0;
+  width: 100%;
 }
 
 .skill-card {
   background: var(--background-white);
-  padding: var(--spacing-lg);
+  padding: 1.5rem;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
@@ -87,6 +86,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .skill-card::before {
@@ -111,8 +111,8 @@
 }
 
 .skill-icon-wrapper {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
@@ -123,7 +123,7 @@
 }
 
 .skill-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--background-white);
 }
 
@@ -145,9 +145,35 @@
 }
 
 .right-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.education-brief {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: 4px;
+}
+
+.education-degree {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.education-field {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.education-and-tech {
+  display: block; /* Grid yapısını kaldırıyoruz */
+
 }
 
 .avatar-container {
@@ -197,14 +223,13 @@
 
 .education-card {
   background: var(--gradient-primary);
-  padding: var(--spacing-lg);
+  padding: 1rem;
   border-radius: var(--border-radius-lg);
   color: var(--background-white);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--spacing-md);
   transition: all 0.3s ease;
   box-shadow: var(--shadow-md);
 }
@@ -215,18 +240,18 @@
 }
 
 .education-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 4rem;
+
 }
 
 .education-title {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: var(--spacing-xs);
+
 }
 
 .education-detail {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   opacity: 0.9;
 }
 
@@ -301,3 +326,100 @@
   transform: translateX(5px);
 }
 
+.tech-stack {
+
+}
+
+.tech-stack-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.tech-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.tech-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--card-color);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.tech-card:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.tech-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  color: var(--card-color);
+}
+
+.tech-level {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.tech-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.tech-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tech-experience {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-cards {
+    grid-template-columns: 1fr;
+  }
+}
