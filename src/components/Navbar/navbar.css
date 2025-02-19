@@ -1,109 +1,139 @@
-.company-logo {
-  max-width: 10vh;
-  width: 100%;
-  margin: 8px 12px;
-}
-
 .navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  margin: 0;
+  background: var(--background-white);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  padding: var(--spacing-xs) var(--spacing-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 110px;
+  transition: all 0.3s ease;
+}
+
+.navbar-container.scrolled {
+  height: 100px;
+  box-shadow: var(--shadow-md);
+}
+
+.logo-cont {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  height: 90px;
+  width: auto;
+  transition: all 0.3s ease;
 }
 
 .navbar-items {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-items: baseline;
-  align-content: stretch;
-  margin: 0 30px;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nb-item {
-  list-style: none;
-  margin-left: 12px;
-  font-size: 1.5rem;
+  position: relative;
 }
 
 .nb-item a {
-  font-family: "Signika Negative", sans-serif;
-  background: linear-gradient(to right, #008037 0%, #ffd871 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* color: azure; */
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
   text-decoration: none;
-  margin-left: 1rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: all 0.3s ease;
+}
+
+.nb-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .nb-item a:hover {
-  background: linear-gradient(to left, #008037 0%, #ffd871 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
+}
+
+.nb-item a:hover::after {
+  width: 100%;
 }
 
 .mobile-menu {
   display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  transition: all 0.3s ease;
 }
 
-  @media screen and (max-width: 650px) {
-    .navbar-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 12vh;
-      background: white;
-    }
-
-    .company-logo {
-      display: flex;
-      position: absolute;
-      top: 10px;
-      left: 25px;
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
-    .navbar-items {
-      display: none;
-    }
-
-    .navbar-items-mobile {
-      position: absolute;
-      display: block;
-      background: white;
-      list-style: none;
-      left: -20px;
-      top: 0;
-      transition: all 0.5s ease-out;
-      width: 100%;
-    }
-
-    .nb-item {
-      color: black;
-      text-align: center;
-      width: 100%;
-      padding: 9px;
-      margin: 20px;
-      transition: all 0.5s ease;
-    }
-
-    .nb-item a {
-        background: linear-gradient(to right,#008037 0%,#ffd871 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .mobile-menu {
-      display: block;
-      position: absolute;
-      font-size: 28px;
-      top:19px;
-      right: 25px;
-      border: none;
-      outline: none;
-    }
+  .mobile-menu {
+    display: block;
   }
+
+  .navbar-items {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--background-white);
+    flex-direction: column;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar-items-mobile {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nb-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nb-item a {
+    display: block;
+    padding: var(--spacing-sm);
+  }
+}
